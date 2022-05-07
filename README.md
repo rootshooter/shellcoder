@@ -42,7 +42,7 @@ python3 shellcoder.py --generate
  </p>
 
  ## Encoding shellcode
- There are a couple options to can use to encode shellcode in different formats. Here is a list of formats the shellcode can be encoded with:
+ There are a couple options you can choose from to encode shellcode. Here is a list of formats the shellcode can be encoded with:
 
 - clang_aes
 - clang_caesar
