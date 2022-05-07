@@ -289,8 +289,7 @@ def vba_caesar(buf):
         if (char_count % chars == 0):
             char_count=0
             str += " _\n"
-    str = str[:-2]
-    str = str[:-2]
+    str = str[:-1]
     str += ")"
     print_success("Here is your Caesar shifted shellcode!")
     print_success(f"buf size: {len(buf)}\n")
@@ -308,8 +307,7 @@ def vba_xor(buf):
         if (char_count % chars == 0):
             char_count=0
             str += " _\n"
-    str = str[:-2]
-    str = str[:-2]
+    str = str[:-1]
     str += ")"
     print_success("Here is your XOR encoded shellcode!")
     print_success(f"buf size: {len(buf)}\n")
