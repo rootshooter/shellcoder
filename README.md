@@ -82,3 +82,7 @@ python3 shellcoder.py -e csharp_xor
 ```bash
 python3 shellcoder.py -h
 ```
+
+<p align="center">
+<a href="/img/help.png"><img src="/img/help.png"></a>
+ </p>
