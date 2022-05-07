@@ -77,6 +77,10 @@ python3 shellcoder.py -e csharp_xor -i raw_sc
  ```bash
 python3 shellcoder.py -e csharp_xor
  ```
+ 
+  <p align="center">
+<a href="/img/enc3.png"><img src="/img/enc3.png"></a>
+ </p>
 
  These are just a few examples of how raw shellcode files can be encoded. You can see the help page for more options with the following command:
 ```bash
