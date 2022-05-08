@@ -384,7 +384,6 @@ if __name__ == "__main__":
     parser.add_argument('-l', '--lhost', default='tun0', help='Listening host address for msfvenom payload (default: tun0)')
     parser.add_argument('-p', '--lport', default='443', help='Listening port for msfvenom payload (default: 443)')
     parser.add_argument('-t', '--type', default='windows/x64/meterpreter/reverse_https', help='Payload format (default: windows/x64/meterpreter/reverse_https)')
-    parser.add_argument('-o', '--outfile', default='/tmp/raw_sc', help='Outputfile destination (default: tmp/raw_sc)')
     parser.add_argument('-g', '--generate', action='store_true', help='Generate msfvenom shellcode. Must specify: -l, -p, -t')
     global args
     args = parser.parse_args()
