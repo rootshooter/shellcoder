@@ -95,7 +95,6 @@ def caesar_shift():
             raw_shell[i] = ((raw_shell[i] + int(shiftval)) & 0xff)
         global crypt
         crypt = raw_shell
-        print(crypt)
     except Exception as error:
         print_fail(error)
         exit()
