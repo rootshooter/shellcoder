@@ -95,6 +95,7 @@ def caesar_shift():
             raw_shell[i] = ((raw_shell[i] + int(shiftval)) & 0xff)
         global crypt
         crypt = raw_shell
+        print(crypt)
     except Exception as error:
         print_fail(error)
         exit()
@@ -173,7 +174,7 @@ def csharp_aes(buf):
         if (char_count % chars == 0):
             char_count = 0
             str += "\n"
-    str = str[:-2]
+    str = str[:-1]
     print_success("Here is your AES encrypted shellcode!")
     print_success(f"buf size: {len(buf)}\n")
     print(f"{str} }};", end = "")
@@ -190,7 +191,7 @@ def csharp_caesar(buf):
         if (char_count % chars == 0):
             char_count = 0
             str += "\n"
-    str = str[:-2]
+    str = str[:-1]
     print_success("Here is your Caesar shifted shellcode!")
     print_success(f"buf size: {len(buf)}\n")
     print(f"{str} }};", end = "")
@@ -207,7 +208,7 @@ def csharp_xor(buf):
         if (char_count % chars == 0):
             char_count = 0
             str += "\n"
-    str = str[:-2]
+    str = str[:-1]
     print_success("Here is your XOR encoded shellcode!")
     print_success(f"buf size: {len(buf)}\n")
     print(f"{str} }};", end = "")
