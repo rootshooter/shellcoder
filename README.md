@@ -6,7 +6,7 @@ This tool has some dependencies that may need to be installed. It was written an
 ```bash
 sudo python3 -m pip install -r requirements.txt
 ```
-This tool is depenedent on msfvenom to generate raw shellcode files. If the Metasploit Framework is not installed on your system, here are the commands you will need to run to install it:
+This tool is dependent on msfvenom to generate raw shellcode files. If the Metasploit Framework is not installed on your system, here are the commands you will need to run to install it:
 ```bash
 wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
 ```
@@ -57,9 +57,9 @@ python3 shellcoder.py --generate
 - vba_caesar
 - vba_xor
 
-To generate shellcode with shellcoder.py, you can supply the -e flag with the encoder type. Optionally you can specify the input and output files with the -i and -o flags, respectively. If you do not specify an input file, shellcoder.py will look for the raw shellcode file located at /tmp/raw_sc. Here are some example commands that can be used to encode your shellcode:
+To generate shellcode with shellcoder.py, you can supply the -e flag with the encoder type. If using ceasar options, use the -s or --shift switch with the number of rotations to do such as -s 3 for a key of 3. Optionally you can specify the input and output files with the -i and -o flags, respectively. If you do not specify an input file, shellcoder.py will look for the raw shellcode file located at /tmp/raw_sc. Here are some example commands that can be used to encode your shellcode:
 ```bash
-python3 shellcoder.py -e chsarp_xor -i raw_sc -o enc_sc.txt
+python3 shellcoder.py -e csharp_xor -i raw_sc -o enc_sc.txt
 ```
 
 <p align="center">
@@ -81,6 +81,14 @@ python3 shellcoder.py -e csharp_xor
   <p align="center">
 <a href="/img/enc3.png"><img src="/img/enc3.png"></a>
  </p>
+ 
+Similarly, the same can be done with aes.
+
+For Ceasar, use the --s or -s switch to specify the rotations:
+ ```bash
+ python3 shellcoder.py -e  csharp_caesar -i raw_sc -s 5
+ ```
+
 
  These are just a few examples of how raw shellcode files can be encoded. You can see the help page for more options with the following command:
 ```bash
